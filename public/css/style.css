@@ -1,0 +1,4 @@
+/*box model*/
+* {
+    box-sizing: border-box;
+}
