@@ -1,4 +1,4 @@
-# Fullstack Template
+# Full Stack Template
 
 ## To use
 1. Clone repo
