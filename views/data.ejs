@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Hello <%= user.userName %></h1>
+
+<p><a href="/logout">Log out</a></p>
+
+<a href="/data/add">Add item</a>
+
+<% for(const item of data) { %>
+    <p><%= item["item"] %> <span>[<a href="/data/edit/<%= item['_id'] %>">edit</a>]</span></p>
+<% } %>
+<%- include("partials/footer.ejs") %>

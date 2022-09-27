@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Add</h1>
+
+<% if (locals.messages.errors) { %>
+    <% messages.errors.forEach( el => { %>
+        <p><%= el.msg %></p>
+    <% }) %>
+<% } %>
+
+<form action="/data/add-data" method='POST'>
+    <label for="item">Item</label>
+    <input type="item" placeholder="Item" name="item">
+    <input type="submit">
+</form>
+
+<%- include("partials/footer.ejs") %>

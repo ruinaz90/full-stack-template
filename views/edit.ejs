@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Update</h1>
+
+<% for(const item of data) { %>
+    <% if(item._id == dataId) {%>
+        <form action="/data/edit/<%= item._id %>" method="POST">
+            <label for="item">Item</label>
+            <input type="text" name="item" id="item" value="<%= item.item %>">
+
+            <input type="submit" value="Save">
+        </form>
+            
+        <form action="/data/delete/<%= item._id %>?_method=DELETE" method="POST">
+            <button type="submit" class="inline-block bg-dyelred px-4 py-2 mb-2 rounded-lg text-sm text-white font-semibold hover:bg-red-700">Delete</button>
+        </form>
+    <% } %>
+<% } %>
+
+<%- include("partials/footer.ejs") %>

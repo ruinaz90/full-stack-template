@@ -1,0 +1,26 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Log in</h1>
+
+<% if (locals.messages.errors) { %>
+    <% messages.errors.forEach( el => { %>
+        <p><%= el.msg %></p>
+    <% }) %>
+<% } %>
+
+<% if (locals.messages.info) { %>
+    <% messages.info.forEach( el => { %>
+        <p><%= el.msg %></p>
+    <% }) %>
+<% } %>
+
+<form action="/login" method="POST">
+    <label for="email">Email</label>
+    <input type="email" name="email" placeholder="Email">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Log In">
+</form>
+
+<%- include("partials/footer.ejs") %>
