@@ -8,5 +8,5 @@
 PORT = [4 digit number]
 DB_STRING = [link to MongoDB]
 ```
-4. `npm init` and `npm install`
+4. `npm init` and `npm install` or `npm i`
 5. `npm run dev`, `npm run start`, or `node server.js`
